@@ -1,0 +1,31 @@
+<!doctype html>
+    <html>
+    <head>
+    <meta charset="utf-8"/>
+    <style>
+    .errors{color: red;}
+    </style>
+    <title>PLEASE SIGN IN</title>
+    </head>
+        <body>
+            <form action="/join" method="POST">
+            <label for="username">Please Enter a Username:
+            <input type="text"  name="username" id="username" value='{{username}}' />
+            </label>
+            <p class="errors">{{username_error}}</p>
+            <label for="password">Please Choose a Password: 
+            <input type="text" value='{{password}}' id="password" name="password" />
+            </label>
+            <p class="errors">{{pass_error}}</p>
+            <label for="verify_password"> Please Verify Your Password: 
+            <input type="text" value='{{verify_password}}' id="verify_password" name="verify_password" />
+            </label>
+            <p class="errors">{{pass_v_error}}</p>
+            <label for="email"> *Optional Please Enter Your Email Address: 
+            <input type="text" value='{{email}}' id="email" name="email" />
+            </label>
+            <p class="errors">{{email_error}}</p>
+            <input type="Submit" value="submit" />
+            </form>
+        </body>
+    </html>
